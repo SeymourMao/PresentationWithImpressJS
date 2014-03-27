@@ -1,0 +1,79 @@
+
+/*
+ * TITLE STEP
+ * =============================================================================
+ */
+
+@keyframes rotate-h1 {
+        0%   { -webkit-transform: perspective(1000px) rotateY(-15deg); }
+        100% { -webkit-transform: perspective(1000px) rotateY(15deg); }
+}
+
+@-webkit-keyframes rotate-h1 {
+        0%   { -webkit-transform: perspective(1000px) rotateY(-15deg); }
+        100% { -webkit-transform: perspective(1000px) rotateY(15deg); }
+}
+
+#title h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 4.5em;
+    line-height: 1.1;
+    margin-top: -200px;
+}
+
+#title h1 .short {
+    text-transform: lowercase;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 0.27em;
+
+    -webkit-transform: translateZ(-50px);
+}
+
+#title h1 .d3 {
+    display: inline-block;
+    -webkit-transform: translateZ(20px);
+}
+
+.transforms {
+    /*color: #FFA500; */
+    color: rgba(255,165,0,0.8);
+    display: inline-block;
+    font-weight: normal;
+    font-size: 0.6em;
+    /*-webkit-transform: translateY(-0.6em) translateZ(50px);*/
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: rotate-h1 2s infinite alternate ease-in-out;
+
+    -webkit-transform: perspective(1000px) rotateY(0deg) translateY(-0.6em) translateZ(50px);
+
+    -webkit-transition: all 2s ease-in-out;
+}
+
+.step {
+    font-size:2em;
+   /* border: 1px solid red; */
+}
+
+.step ul{
+   font-size: 1 em;
+   text-align: left;
+}
+
+code {
+    display: block;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.5);
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+#reference ul {
+    list-style-position: outside;
+    opacity: 0.9;
+    margin-top: 0.5em;
+    list-style-type: square;
+    font-size: 0.8em;
+}
